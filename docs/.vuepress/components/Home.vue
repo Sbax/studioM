@@ -33,6 +33,9 @@
                 </div>
             </div>
         </section>
+        <section class="map">
+            <Map />
+        </section>
     </div>
 </template>
 
@@ -100,6 +103,8 @@ img {
     background: white;
     color: black;
     padding: 2rem 0;
+
+    padding-bottom: 3rem;
     position: relative;
     &:before {
         content: '';
@@ -116,6 +121,21 @@ img {
         z-index: -1;
     }
 
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        @media screen and (min-width: 600px) {
+            bottom: -3rem;
+        }
+        left: 0;
+        right: 0;
+        height: 6rem;
+        background: white;
+        transform: skewY(2deg);
+        z-index: 2;
+    }
+
     .avatar {
         img {
             max-width: 100%;
@@ -124,6 +144,11 @@ img {
 
     .description {
         margin: 1rem;
+    }
+
+    + * {
+        position: relative;
+        z-index: 1;
     }
 }
 
@@ -173,5 +198,12 @@ img {
     p {
         text-align: center;
     }
+}
+
+.map {
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 66vh;
 }
 </style>

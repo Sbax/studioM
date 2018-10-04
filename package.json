@@ -16,6 +16,7 @@
         "docs:build": "vuepress build docs"
     },
     "dependencies": {
-        "axios": "^0.18.0"
+        "axios": "^0.18.0",
+        "vue2-leaflet": "^1.0.2"
     }
 }
