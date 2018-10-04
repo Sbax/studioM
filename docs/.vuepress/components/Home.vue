@@ -50,12 +50,16 @@ export default {
 section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
+    padding-bottom: 3rem;
+
+    @media screen and (min-width: 600px) {
+        justify-content: center;
+    }
 
     &:first-of-type {
-        height: calc(100vh - 6rem);
+        min-height: calc(100vh - 6rem);
     }
 
     .inner {
@@ -136,14 +140,27 @@ img {
         flex: 1;
 
         + .column {
-            margin-left: 3rem;
+            margin-top: 3rem;
+
+            @media screen and (min-width: 1024px) {
+                margin-top: 0;
+                margin-left: 3rem;
+            }
         }
     }
 }
 
 .products {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: column;
+    }
+
     .logos {
-        margin: 0 4rem;
+        margin: 2rem 4rem;
+
         a {
             display: block;
         }
