@@ -1,0 +1,21 @@
+{
+    "title": "Studio M Parrucchieri Uomo Donna",
+    "description": "di Maurizio Fabbri",
+    "logo": "/logo.svg",
+    "footer": "",
+    "favicon": "favicon-32x32.png",
+    "navigation": [
+        {
+            "text": "Studio",
+            "link": "/",
+            "position": "left",
+            "external": false
+        },
+        {
+            "text": "News",
+            "link": "/news/",
+            "position": "left",
+            "external": false
+        }
+    ]
+}
