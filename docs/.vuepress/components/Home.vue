@@ -38,17 +38,45 @@
                 <Map />
             </div>
             <div class="column">
-                <div class="times">
-                    Aperto da martedì a giovedì dalle 12 alle 19,30<br>
-                    venerdì dalle 9 alle 19<br>
-                    sabato dalle 9 alle 17<br>
-                </div>
-                <div class="place">
-                    Torre Lasie - via Lasie 10/L<br>
-                    40026 Imola (Bo)<br>
-                    +39 0542 643314<br>
-                    studiomparrucchieri@gmail.com
-                </div>
+                <article class="social">
+                    <a href="https://www.facebook.com/pg/Studio-M-Parrucchieri-1644568429132611/photos/?ref=page_internal">
+                        <div>
+                            <img src="facebook.svg" alt="">
+                        </div>
+                    </a>
+                    <div>
+                        <img src="instagram.svg" alt="">
+                    </div>
+                </article>
+                <article class="contacts">
+                    <h1>Contatti</h1>
+                    <p>
+                        <p>
+                            <a href="https://www.google.it/maps/place/Studio+M+Di+Fabbri+Maurizio/@44.3771006,11.7263129,15z/data=!4m5!3m4!1s0x0:0x346d6bb38e4702a6!8m2!3d44.3771006!4d11.7263129">
+                                Torre Lasie - via Lasie 10/L
+                                40026 Imola (Bo)
+                            </a>
+                        </p>
+                        <p>
+                            <a href="tel:+390542643314">
+                                +39 0542 643314
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:studiomparrucchieri@gmail.com">
+                                studiomparrucchieri@gmail.com
+                            </a>
+                        </p>
+                    </p>
+                </article>
+                <article class="times">
+                    <h1>Orari</h1>
+                    <p>
+                        Aperto da martedì a giovedì dalle 12 alle 19,30<br>
+                        venerdì dalle 9 alle 19<br>
+                        sabato dalle 9 alle 17<br>
+                    </p>
+                </article>
             </div>
         </section>
     </div>
@@ -211,21 +239,74 @@ img {
     }
 }
 
+.social {
+    display: flex;
+
+    > * {
+        height: 4rem;
+        width: 4rem;
+
+        + * {
+            margin-left: 2rem;
+        }
+    }
+}
+
 .map {
-    flex-direction: row;
+    flex-direction: column-reverse;
     display: flex;
     padding: 0;
-    width: 100%;
-    height: 66vh;
+
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+        width: 100%;
+        height: 66vh;
+    }
 
     .column {
         flex: 1;
-        height: 100%;
+
+        height: 100vh;
+        width: 100%;
+
+        @media screen and (min-width: 600px) {
+            height: 100%;
+        }
+
         background: black;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        line-height: 2rem;
+
+        .contacts {
+            a {
+                display: inline-block;
+                position: relative;
+                height: 2rem;
+                margin-bottom: 0.2rem;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0.2rem;
+                    width: 100%;
+                    height: 2px;
+                    background: white;
+                    transform: scaleX(1);
+                    transition: transform 300ms ease;
+                }
+
+                &:hover,
+                &.active {
+                    &:before {
+                        transform: scaleX(0.5);
+                    }
+                }
+            }
+        }
     }
 }
 </style>
