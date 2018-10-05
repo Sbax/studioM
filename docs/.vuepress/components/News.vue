@@ -17,11 +17,11 @@ export default {
     }
   },
   async beforeMount() {
-    const sessionNews = JSON.parse(sessionStorage.getItem("news"));
+    const sessionNews = JSON.parse(sessionStorage.getItem("studio-m-imola-news"));
     
     const response = sessionNews || (await axios.get('https://public-api.wordpress.com/wp/v2/sites/studiomparrucchierinews.wordpress.com/posts'));
     
-    sessionStorage.setItem("news", JSON.stringify(response));
+    sessionStorage.setItem("studio-m-imola-news", JSON.stringify(response));
 
     this.$data.items = response.data.map((e, i) => {
       const content = document.createElement('p');
