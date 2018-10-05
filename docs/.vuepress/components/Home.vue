@@ -14,27 +14,42 @@
             <div class="inner row">
                 <div class="column">
                     <article class="avatar">
-                        <img :src="data.avatar"/>
+                        <img :src="data.avatar" />
                     </article>
-                        <h1>{{data.name}}</h1>
+                    <h1>{{data.name}}</h1>
 
-                        <article class="description">
-                            {{data.info}}
-                        </article>
+                    <article class="description">
+                        {{data.info}}
+                    </article>
                 </div>
                 <div class="column products">
 
                     <div class="logos">
                         <a href="https://www.wella.com/professional/it-IT/home"><img src="wella-logo-black.png" alt="Wella"></a>
-                            <a href="https://it.tigiprofessional.com/?country=IT"><img src="tigi-logo-black.png" alt="Tigi"></a>
-                                <a href="https://terradisole.it/"><img src="terradisole-logo-black.png" alt="Terra di Sole"></a>
+                        <a href="https://it.tigiprofessional.com/?country=IT"><img src="tigi-logo-black.png" alt="Tigi"></a>
+                        <a href="https://terradisole.it/"><img src="terradisole-logo-black.png" alt="Terra di Sole"></a>
                     </div>
                     <p>Lo studio M si affida all'esperienza e professionalità delle migliori case di cosmetici per la bellezza e salute dei tuoi capelli.</p>
                 </div>
             </div>
         </section>
         <section class="map">
-            <Map />
+            <div class="column">
+                <Map />
+            </div>
+            <div class="column">
+                <div class="times">
+                    Aperto da martedì a giovedì dalle 12 alle 19,30<br>
+                    venerdì dalle 9 alle 19<br>
+                    sabato dalle 9 alle 17<br>
+                </div>
+                <div class="place">
+                    Torre Lasie - via Lasie 10/L<br>
+                    40026 Imola (Bo)<br>
+                    +39 0542 643314<br>
+                    studiomparrucchieri@gmail.com
+                </div>
+            </div>
         </section>
     </div>
 </template>
@@ -59,10 +74,6 @@ section {
 
     @media screen and (min-width: 600px) {
         justify-content: center;
-    }
-
-    &:first-of-type {
-        min-height: calc(100vh - 6rem);
     }
 
     .inner {
@@ -201,9 +212,20 @@ img {
 }
 
 .map {
-    display: block;
+    flex-direction: row;
+    display: flex;
     padding: 0;
     width: 100%;
     height: 66vh;
+
+    .column {
+        flex: 1;
+        height: 100%;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 </style>

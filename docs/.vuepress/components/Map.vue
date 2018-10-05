@@ -1,54 +1,39 @@
 <template>
   <div class="map-container">
     <div class="overlay" v-show="isOpen">
-      <div class="times">
-        Aperto da martedì a giovedì dalle 12 alle 19,30<br>
-          venerdì dalle 9 alle 19<br>
-          sabato dalle 9 alle 17<br>
-        </div>
-        <div class="place">
-          Torre Lasie - via Lasie 10/L<br>
-            40026 Imola (Bo)<br>
-            +39 0542 643314<br>
-            studiomparrucchieri@gmail.com
-          <button v-on:click='isOpen = !isOpen'>Naviga la mappa</button>
-        </div>
-      </div>
-      <button class="close" v-show="!isOpen" v-on:click='isOpen = !isOpen'>Chiudi</button>
-      <l-map :options="{zoomControl: false, attributionControl: false}" :zoom="zoom" :center="center">
-        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-        <l-marker :lat-lng="marker"></l-marker>
-      </l-map>
+      <button v-on:click='isOpen = !isOpen'>Naviga la mappa</button>
     </div>
+    <button class="close" v-show="!isOpen" v-on:click='isOpen = !isOpen'>Chiudi</button>
+    <div class="map-wrapper" id="map-wrapper"></div>
+  </div>
 </template>
 
 <script>
-  import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
-
   export default {
-    name: 'Example',
-    components: {
-      LMap,
-      LTileLayer,
-      LMarker
+    name: 'Map',
+    mounted() {
+      const { LMap, LTileLayer, LMarker } = require('vue2-leaflet');
+      const position = L.latLng(44.3771006,11.7263129);
+
+      const map = L.map('map-wrapper', {
+        zoomControl: false
+      }).setView(position, 16);
+      
+      L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+      }).addTo(map);
+
+      const icon = L.icon({
+        iconUrl: '/location-pin.svg',
+        iconSize: [38, 95],
+        iconAnchor: [22, 94]
+      });
+
+      L.marker(position, {icon: icon}).addTo(map);
     },
     data () {
-      delete L.Icon.Default.prototype._getIconUrl  
-      L.Icon.Default.mergeOptions({  
-        iconRetinaUrl: require('../public/location-pin.svg'),
-        iconUrl: require('../public/location-pin.svg'),
-        shadowUrl: ''
-      })
-
       return {
         isOpen: true,
-        zoom: 15,
-        center: L.latLng(44.3771006,11.7263129),
-        url: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png',
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-        currentZoom: 13,
-        marker: L.latLng(44.3771006,11.7263129),
-        currentCenter: L.latLng(44.3771006,11.7263129)
       };
     }
   };
@@ -110,38 +95,17 @@
         bottom: 0;
         right: 0;
         z-index: 2;
-        background: fade_out(white, 0.5);
+        background: fade_out(black, 0.5);
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
-        > * + * {
-            margin-top: 2rem;
-        }
-
-        > * {
-            color: black;
-            padding: 1rem;
-            position: relative;
-
-            &:after {
-                content: '';
-                z-index: -1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: white;
-
-                transform: skewY(2deg);
-            }
-        }
     }
 
-    .vue2leaflet-map {
+    .map-wrapper {
+        width: 100%;
+        height: 100%;
         z-index: 1;
     }
 }
