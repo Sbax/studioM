@@ -19,7 +19,7 @@
                     <h1>{{data.name}}</h1>
 
                     <article class="description">
-                        {{data.info}}
+                        {{data.profile_text}}
                     </article>
                 </div>
                 <div class="column products">
@@ -29,7 +29,7 @@
                         <a href="https://it.tigiprofessional.com/?country=IT"><img src="tigi-logo-black.png" alt="Tigi"></a>
                         <a href="https://terradisole.it/"><img src="terradisole-logo-black.png" alt="Terra di Sole"></a>
                     </div>
-                    <p>Lo studio M si affida all'esperienza e professionalità delle migliori case di cosmetici per la bellezza e salute dei tuoi capelli.</p>
+                    <p>{{data.products_text}}</p>
                 </div>
             </div>
         </section>
@@ -264,10 +264,11 @@ img {
     }
 
     .column {
+        margin-top: 4rem;
         flex: 1;
 
         height: 100vh;
-        width: 100%;
+        width: 100%;    
 
         @media screen and (min-width: 600px) {
             height: 100%;
