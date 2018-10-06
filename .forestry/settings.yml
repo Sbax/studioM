@@ -13,12 +13,4 @@ upload_dir: docs/.vuepress
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
-<<<<<<< Updated upstream
 file_template: ":filename:"
-build:
-  preview_command: npm run docs:build
-  publish_command: npm run docs:build
-  output_directory: docs/.vuepress/dist
-=======
-file_template: ":filename:"
->>>>>>> Stashed changes
