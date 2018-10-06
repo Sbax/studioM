@@ -19,3 +19,5 @@ fields:
 - type: image_gallery
   name: gallery
   label: Gallery
+pages:
+- docs/README.md
