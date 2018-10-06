@@ -8,7 +8,10 @@ profile_text: Dopo il diploma di Stylist alla Toni&Guy Academy di Londra e anni 
   la garanzia della casa leader dell'hairstyle mondiale.
 products_text: Lo studio M si affida all'esperienza e professionalità delle migliori
   case di cosmetici per la bellezza e salute dei tuoi capelli.
-gallery: []
+gallery:
+- "/dscn2325.jpg"
+- "/dscn2287.jpg"
+- "/dscn2278.jpg"
 
 ---
 Innovazione e tradizione, avanguardia e metodo, l’Arte e la Scuola di un mestiere: tutto quanto appreso in anni di lavoro e costante formazione, Maurizio lo mette al servizio dei clienti. Delle loro esigenze e dei loro desideri davanti a tutto, con in più l’affidabile consulenza di chi, per la tua testa, ha idee in testa!
