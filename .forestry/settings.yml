@@ -3,7 +3,7 @@ new_page_extension: md
 auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
-sections: 
+sections:
 - type: document
   path: docs/README.md
   label: Homepage
