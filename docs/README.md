@@ -21,9 +21,7 @@ products:
   logo: "/public/terradisole-logo-black.png"
 times: |-
   Aperto da martedì a giovedì dalle 12 alle 19,30
-
   venerdì dalle 9 alle 19
-
   sabato dalle 9 alle 17
 
 ---

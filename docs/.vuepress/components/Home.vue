@@ -3,7 +3,7 @@
         <section class="main">
             <div class="inner">
                 <img src="logo-expanded.svg" alt="Logo completo">
-                <article>
+                <article class="content">
                     <Content />
                     <h1>{{data.mission}}</h1>
                 </article>
@@ -25,9 +25,9 @@
                 <div class="column products">
 
                     <div class="logos">
-                        <a href="https://www.wella.com/professional/it-IT/home"><img src="wella-logo-black.png" alt="Wella"></a>
-                        <a href="https://it.tigiprofessional.com/?country=IT"><img src="tigi-logo-black.png" alt="Tigi"></a>
-                        <a href="https://terradisole.it/"><img src="terradisole-logo-black.png" alt="Terra di Sole"></a>
+                        <a v-for="product in data.products" :href="product.url">
+                            <img :src="product.url">
+                        </a>
                     </div>
                     <p>{{data.products_text}}</p>
                 </div>
@@ -72,9 +72,7 @@
                 <article class="times">
                     <h1>Orari</h1>
                     <p>
-                        Aperto da martedì a giovedì dalle 12 alle 19,30<br>
-                        venerdì dalle 9 alle 19<br>
-                        sabato dalle 9 alle 17<br>
+                        {{data.times}}
                     </p>
                 </article>
             </div>
@@ -91,6 +89,18 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+article.content {
+    line-height: 1.2rem;
+
+    p + p {
+        margin-top: 1rem;
+    }
+}
+
+</style>
+
 
 <style lang="scss" scoped>
 section {
@@ -309,5 +319,9 @@ img {
             }
         }
     }
+}
+
+.times {
+    white-space: pre-line;
 }
 </style>
