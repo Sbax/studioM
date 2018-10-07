@@ -12,6 +12,13 @@ gallery:
 - "/dscn2325.jpg"
 - "/dscn2287.jpg"
 - "/dscn2278.jpg"
+products:
+- url: https://www.wella.com/professional/it-IT/home
+  logo: "/public/wella-logo-black.png"
+- logo: "/public/tigi-logo-black.png"
+  url: https://it.tigiprofessional.com/?country=IT
+- url: https://terradisole.it/
+  logo: "/public/terradisole-logo-black.png"
 
 ---
 Innovazione e tradizione, avanguardia e metodo, l’Arte e la Scuola di un mestiere: tutto quanto appreso in anni di lavoro e costante formazione, Maurizio lo mette al servizio dei clienti. Delle loro esigenze e dei loro desideri davanti a tutto, con in più l’affidabile consulenza di chi, per la tua testa, ha idee in testa!
