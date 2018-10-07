@@ -25,5 +25,7 @@ fields:
   - type: text
     name: url
     label: Link pagina web
+    config:
+      required: true
 pages:
 - docs/README.md
