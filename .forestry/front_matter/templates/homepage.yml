@@ -27,5 +27,8 @@ fields:
     label: Link pagina web
     config:
       required: true
+  - type: file
+    name: logo
+    label: Logo
 pages:
 - docs/README.md
