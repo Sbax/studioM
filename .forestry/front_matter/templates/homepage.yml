@@ -21,5 +21,9 @@ fields:
   label: Marchi
   config:
     max: '3'
+  fields:
+  - type: text
+    name: url
+    label: Link pagina web
 pages:
 - docs/README.md
