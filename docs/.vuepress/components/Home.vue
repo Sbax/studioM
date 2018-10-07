@@ -26,7 +26,7 @@
 
                     <div class="logos">
                         <a v-for="product in data.products" :href="product.url">
-                            <img :src="product.url">
+                            <img :src="product.logo">
                         </a>
                     </div>
                     <p>{{data.products_text}}</p>
