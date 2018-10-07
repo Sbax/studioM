@@ -14,11 +14,11 @@ gallery:
 - "/dscn2278.jpg"
 products:
 - url: https://www.wella.com/professional/it-IT/home
-  logo: "/public/wella-logo-black.png"
-- logo: "/public/tigi-logo-black.png"
+  logo: "/wella-logo-black.png"
+- logo: "/tigi-logo-black.png"
   url: https://it.tigiprofessional.com/?country=IT
 - url: https://terradisole.it/
-  logo: "/public/terradisole-logo-black.png"
+  logo: "/terradisole-logo-black.png"
 times: |-
   Aperto da martedì a giovedì dalle 12 alle 19,30
   venerdì dalle 9 alle 19
