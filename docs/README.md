@@ -19,6 +19,10 @@ products:
   url: https://it.tigiprofessional.com/?country=IT
 - url: https://terradisole.it/
   logo: "/public/terradisole-logo-black.png"
+times: |-
+  Aperto da martedì a giovedì dalle 12 alle 19,30
+  venerdì dalle 9 alle 19
+  sabato dalle 9 alle 17
 
 ---
 Innovazione e tradizione, avanguardia e metodo, l’Arte e la Scuola di un mestiere: tutto quanto appreso in anni di lavoro e costante formazione, Maurizio lo mette al servizio dei clienti. Delle loro esigenze e dei loro desideri davanti a tutto, con in più l’affidabile consulenza di chi, per la tua testa, ha idee in testa!
