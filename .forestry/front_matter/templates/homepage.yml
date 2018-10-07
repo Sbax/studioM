@@ -13,9 +13,6 @@ fields:
 - type: textarea
   name: products_text
   label: Descrizione prodotti
-- type: image_gallery
-  name: gallery
-  label: Gallery
 - type: field_group_list
   name: products
   label: Marchi
@@ -30,5 +27,8 @@ fields:
   - type: file
     name: logo
     label: Logo
+- type: image_gallery
+  name: gallery
+  label: Gallery
 pages:
 - docs/README.md
