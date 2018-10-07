@@ -33,5 +33,9 @@ fields:
 - type: textarea
   name: times
   label: Orari
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 pages:
 - docs/README.md
