@@ -16,5 +16,10 @@ fields:
 - type: image_gallery
   name: gallery
   label: Gallery
+- type: field_group_list
+  name: products
+  label: Marchi
+  config:
+    max: '3'
 pages:
 - docs/README.md
