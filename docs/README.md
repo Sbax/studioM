@@ -9,6 +9,7 @@ profile_text: Dopo il diploma di Stylist alla Toni&Guy Academy di Londra e anni 
 products_text: Lo studio M si affida all'esperienza e professionalità delle migliori
   case di cosmetici per la bellezza e salute dei tuoi capelli.
 gallery:
+- "/img_0078.jpg"
 - "/dscn2325.jpg"
 - "/dscn2287.jpg"
 - "/dscn2278.jpg"
