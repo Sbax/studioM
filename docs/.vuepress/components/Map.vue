@@ -1,7 +1,7 @@
 <template>
   <div class="map-container">
     <div class="overlay" v-show="isOpen">
-      <button v-on:click='isOpen = !isOpen'>Naviga la mappa</button>
+      <button v-on:click='isOpen = !isOpen'>Mostra la mappa</button>
     </div>
     <button class="close" v-show="!isOpen" v-on:click='isOpen = !isOpen'>Chiudi</button>
     <div class="map-wrapper" id="map-wrapper"></div>

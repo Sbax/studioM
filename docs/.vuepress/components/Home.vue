@@ -32,6 +32,15 @@
                     <p>{{data.products_text}}</p>
                 </div>
             </div>
+
+            <div class="inner row">
+                <ClientOnly>
+                    <div class="gallery">
+                        <img :class="'area-'+i" v-for="(image, i) in data.gallery.slice(0, 5)" :src="image" @click="update(i)">
+                    </div>
+                    <VueGallerySlideshow ref="lightbox" :images="data.gallery" :index="index" @close="update(null)"></VueGallerySlideshow>
+                </ClientOnly>
+            </div>
         </section>
         <section class="map">
             <div class="column">
@@ -84,7 +93,17 @@
 export default {
   computed: {
     data() {
-      return this.$page.frontmatter;
+        return this.$page.frontmatter;
+    }
+  },
+  data() {
+    return {
+        index: null
+    }
+  },
+  methods: {
+    update: function(event) {
+        this.index = event;
     }
   }
 };
@@ -96,6 +115,10 @@ article.content {
 
     p + p {
         margin-top: 1rem;
+    }
+
+    h1 {
+        line-height: 1.2;
     }
 }
 
@@ -324,4 +347,31 @@ img {
 .times {
     white-space: pre-line;
 }
+
+.gallery {
+  margin: 2rem;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: "area-1 area-1" "area-2 area-3" "area-4 area-5";
+  grid-gap: 1em;
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "area-1 area-2 area-3" "area-1 area-4 area-5";
+        grid-gap: 0px 1em;
+    }
+}
+
+.area-1 { grid-area: area-1; }
+
+.area-2 { grid-area: area-2; }
+
+.area-3 { grid-area: area-3; }
+
+.area-4 { grid-area: area-4; }
+
+.area-5 { grid-area: area-5; }
 </style>

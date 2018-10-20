@@ -104,6 +104,8 @@ export default {
         line-height: 1.4rem;
         margin-top: 2rem;
         padding: 1rem;
+
+        overflow: hidden;
         &:nth-child(even) {
             background: white;
             color: black;
