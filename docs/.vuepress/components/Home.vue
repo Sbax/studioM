@@ -57,7 +57,7 @@
                         <img src="instagram.svg" alt="">
                     </div>
                 </article>
-                <article class="contacts">
+                <article class="contacts" id="contacts">
                     <h1>Contatti</h1>
                     <p>
                         <p>

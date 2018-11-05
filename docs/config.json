@@ -12,6 +12,12 @@
             "external": false
         },
         {
+            "text": "Contatti",
+            "link": "/#contacts",
+            "position": "left",
+            "external": false
+        },
+        {
             "text": "News",
             "link": "/news/",
             "position": "left",
