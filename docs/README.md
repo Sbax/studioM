@@ -9,9 +9,11 @@ profile_text: Dopo il diploma di Stylist alla Toni&Guy Academy di Londra e anni 
 products_text: Lo studio M si affida all'esperienza e professionalità delle migliori
   case di cosmetici per la bellezza e salute dei tuoi capelli.
 gallery:
-- "/dscn2325.jpg"
-- "/dscn2287.jpg"
-- "/dscn2278.jpg"
+- "/1.jpg"
+- "/2.jpg"
+- "/3.jpg"
+- "/4.jpg"
+- "/5.jpg"
 products:
 - url: https://www.wella.com/professional/it-IT/home
   logo: "/wella-logo-black.png"
@@ -21,6 +23,7 @@ products:
   logo: "/terradisole-logo-black.png"
 times: Aperto da martedì a giovedì dalle 12 alle 19.00 venerdì dalle 11 alle 19 sabato
   dalle 9 alle 17
+home_image: "/home.jpg"
 
 ---
 Innovazione e tradizione, avanguardia e metodo, l’Arte e la Scuola di un mestiere: tutto quanto appreso in anni di lavoro e costante formazione, Maurizio lo mette al servizio dei clienti. Delle loro esigenze e dei loro desideri davanti a tutto, con in più l’affidabile consulenza di chi, per la tua testa, ha idee in testa!
