@@ -10,6 +10,9 @@ fields:
   name: mission
   label: Mission
   default: Good looking to all of you!
+- type: file
+  label: Immagine profilo
+  name: avatar
 - type: textarea
   label: Descrizione profilo
   name: profile_text
@@ -40,8 +43,5 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-- type: file
-  label: Immagine profilo
-  name: avatar
 pages:
 - docs/README.md
