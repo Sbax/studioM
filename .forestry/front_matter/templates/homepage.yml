@@ -3,6 +3,9 @@ label: Homepage
 hide_body: false
 is_partial: false
 fields:
+- type: file
+  name: home_image
+  label: Immagine Home
 - type: text
   name: mission
   label: Mission
@@ -37,5 +40,8 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+- type: file
+  label: Immagine profilo
+  name: avatar
 pages:
 - docs/README.md
