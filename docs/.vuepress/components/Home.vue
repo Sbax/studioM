@@ -3,6 +3,7 @@
         <section class="main">
             <div class="inner">
                 <img src="logo-expanded.svg" alt="Logo completo">
+                <img :src="data.home_image" alt="">
                 <article class="content">
                     <Content />
                     <h1>{{data.mission}}</h1>
@@ -53,9 +54,11 @@
                             <img src="facebook.svg" alt="">
                         </div>
                     </a>
-                    <div>
-                        <img src="instagram.svg" alt="">
-                    </div>
+                    <a href="https://www.instagram.com/studiomparrucchieri/">
+                        <div>
+                            <img src="instagram.svg" alt="">
+                        </div>
+                    </a>
                 </article>
                 <article class="contacts" id="contacts">
                     <h1>Contatti</h1>
@@ -169,6 +172,11 @@ img {
     article {
         margin: 2rem;
     }
+
+    img + img {
+        margin: 2rem auto;
+    }
+
 }
 
 .profile {
