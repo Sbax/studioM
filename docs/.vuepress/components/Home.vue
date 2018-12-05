@@ -3,7 +3,6 @@
         <section class="main">
             <div class="inner">
                 <img src="logo-expanded.svg" alt="Logo completo">
-                <img :src="data.home_image" alt="">
                 <article class="content">
                     <Content />
                     <h1>{{data.mission}}</h1>
@@ -54,11 +53,9 @@
                             <img src="facebook.svg" alt="">
                         </div>
                     </a>
-                    <a href="https://www.instagram.com/studiomparrucchieri/">
-                        <div>
-                            <img src="instagram.svg" alt="">
-                        </div>
-                    </a>
+                    <div>
+                        <img src="instagram.svg" alt="">
+                    </div>
                 </article>
                 <article class="contacts" id="contacts">
                     <h1>Contatti</h1>
@@ -172,11 +169,6 @@ img {
     article {
         margin: 2rem;
     }
-
-    img + img {
-        margin: 2rem auto;
-    }
-
 }
 
 .profile {
@@ -362,16 +354,17 @@ img {
   height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
-  grid-template-areas: "area-1 area-1" "area-2 area-3" "area-4 area-5";
+  grid-template-areas: "area-0 area-0" "area-1 area-2" "area-3 area-4";
   grid-gap: 1em;
 
     @media screen and (min-width: 600px) {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "area-1 area-2 area-3" "area-1 area-4 area-5";
+        grid-template-areas: "area-0 area-1 area-2" "area-0 area-3 area-4";
         grid-gap: 0px 1em;
     }
 }
+.area-0 { grid-area: area-0; }
 
 .area-1 { grid-area: area-1; }
 
@@ -381,5 +374,4 @@ img {
 
 .area-4 { grid-area: area-4; }
 
-.area-5 { grid-area: area-5; }
 </style>
