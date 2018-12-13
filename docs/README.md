@@ -10,10 +10,8 @@ products_text: Lo studio M si affida all'esperienza e professionalità delle mig
   case di cosmetici per la bellezza e salute dei tuoi capelli.
 gallery:
 - "/1.jpg"
-- "/2.jpg"
 - "/3.jpg"
 - "/4.jpg"
-- "/5.jpg"
 products:
 - url: https://www.wella.com/professional/it-IT/home
   logo: "/wella-logo-black.png"
@@ -21,8 +19,8 @@ products:
   url: https://it.tigiprofessional.com/?country=IT
 - url: https://terradisole.it/
   logo: "/terradisole-logo-black.png"
-times: "Aperto da martedì a giovedì dalle 12 alle 19.00\n\nvenerdì dalle 11 alle 19
-  \n\nsabato dalle 9 alle 17"
+times: "Aperto da martedì a giovedì dalle 12 alle 19.00\nvenerdì dalle 11 alle 19
+  \nsabato dalle 9 alle 17"
 home_image: "/home.jpg"
 
 ---
