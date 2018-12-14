@@ -43,7 +43,7 @@
                 </ClientOnly>
             </div>
         </section>
-        <section class="contacts" id="contacts">
+        <section class="contacts">
             <article class="social">
                 <a href="https://www.facebook.com/pg/Studio-M-Parrucchieri-1644568429132611/photos/?ref=page_internal">
                     <div>
@@ -56,11 +56,11 @@
                     </div>
                 </a>
             </article>
-            <article class="contacts" id="contacts">
-                <h1>Contatti</h1>
+            <article class="contacts">
+                <h1 id="contacts">Contatti</h1>
             </article>
             <img src="maubg.png" alt="Maurizio Fabbri" class="img-responsive">
-            <article class="contacts" id="contacts">
+            <article class="contacts">
                 <p>
                     <p>
                         <a href="tel:+390542643314">
@@ -305,6 +305,15 @@ section.contacts {
     position: relative;
     z-index: 2;
 
+    > * {
+        width: 90vw;
+        margin: auto;
+
+        @media screen and (min-width: 1024px) {
+            width: auto;
+        }
+    }
+
     img {
         width: 75vw;
         margin-bottom: 2rem;
@@ -326,6 +335,35 @@ section.contacts {
         height: 6rem;
         background: black;
         transform: skewY(2deg);
+        z-index: -1;
+    }
+
+     .contacts {            
+        a {
+            display: inline-block;
+            position: relative;
+            height: 2rem;
+            margin-bottom: 0.2rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0.2rem;
+                width: 100%;
+                height: 2px;
+                background: white;
+                transform: scaleX(1);
+                transition: transform 300ms ease;
+            }
+
+            &:hover,
+            &.active {
+                &:before {
+                    transform: scaleX(0.5);
+                }
+            }
+        }
     }
 }
 
@@ -349,53 +387,7 @@ section.contacts {
         width: 100%;
         min-height: 700px;
     }
-
-    .column {
-        margin: 6rem 0;
-        flex: 1;
-
-        height: 66vh;
-        width: 100%;
-
-        @media screen and (min-width: 600px) {
-            height: 100%;
-        }
-
-        background: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        line-height: 2rem;
-
-        .contacts {            
-            a {
-                display: inline-block;
-                position: relative;
-                height: 2rem;
-                margin-bottom: 0.2rem;
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    bottom: 0.2rem;
-                    width: 100%;
-                    height: 2px;
-                    background: white;
-                    transform: scaleX(1);
-                    transition: transform 300ms ease;
-                }
-
-                &:hover,
-                &.active {
-                    &:before {
-                        transform: scaleX(0.5);
-                    }
-                }
-            }
-        }
-    }
+    
 }
 
 .times {
