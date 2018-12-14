@@ -69,6 +69,13 @@
                     </p>
                 </p>
             </article>
+            <article class="times">
+                <h1>Orari</h1>
+                <div>
+                    <div>da&nbsp;</div>
+                    <div>{{data.times}}</div>    
+                </div>
+            </article>
             <article class="social">
                 <a href="https://www.facebook.com/pg/Studio-M-Parrucchieri-1644568429132611/photos/?ref=page_internal">
                     <div>
@@ -80,13 +87,6 @@
                         <img src="instagram.svg" alt="">
                     </div>
                 </a>
-            </article>
-            <article class="times">
-                <h1>Orari</h1>
-                <div>
-                    <div>da&nbsp;</div>
-                    <div>{{data.times}}</div>    
-                </div>
             </article>
         </section>
         <section class="map">
@@ -287,7 +287,7 @@ img {
 
 .social {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: 2rem;
 
     > * {
