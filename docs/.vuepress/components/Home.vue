@@ -313,7 +313,7 @@ section.contacts {
 
     > * {
         width: 90vw;
-        margin: 2rem auto 0 auto;
+        margin: 1.2rem auto 0 auto;
 
         @media screen and (min-width: 1024px) {
             width: auto;
@@ -322,8 +322,6 @@ section.contacts {
 
     img {
         width: 75vw;
-        margin-bottom: 2rem;
-
         @media screen and (min-width: 1024px) {
             width: 50vw;
         }
@@ -349,6 +347,7 @@ section.contacts {
             display: inline-block;
             position: relative;
             height: 2rem;
+            line-height: 1.8rem;
             margin-bottom: 0.2rem;
 
             &:before {
