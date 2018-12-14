@@ -63,12 +63,6 @@
             <article class="contacts" id="contacts">
                 <p>
                     <p>
-                        <a href="https://www.google.it/maps/place/Studio+M+Di+Fabbri+Maurizio/@44.3771006,11.7263129,15z/data=!4m5!3m4!1s0x0:0x346d6bb38e4702a6!8m2!3d44.3771006!4d11.7263129">
-                            Torre Lasie - via Lasie 10/L
-                            40026 Imola (Bo)
-                        </a>
-                    </p>
-                    <p>
                         <a href="tel:+390542643314">
                             +39 0542 643314
                         </a>
@@ -78,11 +72,20 @@
                             studiomparrucchieri@gmail.com
                         </a>
                     </p>
+                    <p>
+                        <a href="https://www.google.it/maps/place/Studio+M+Di+Fabbri+Maurizio/@44.3771006,11.7263129,15z/data=!4m5!3m4!1s0x0:0x346d6bb38e4702a6!8m2!3d44.3771006!4d11.7263129">
+                            Torre Lasie - via Lasie 10/L
+                            40026 Imola (Bo)
+                        </a>
+                    </p>
                 </p>
             </article>
             <article class="times">
                 <h1>Orari</h1>
-                <p>{{data.times}}</p>
+                <div>
+                    <div>da&nbsp;</div>
+                    <div>{{data.times}}</div>    
+                </div>
             </article>
         </section>
         <section class="map">
@@ -377,6 +380,10 @@ section.contacts {
 }
 
 .times {
+    > div {
+        display: flex;
+    }
+
     white-space: pre-line;
 
     h1 {
