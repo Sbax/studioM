@@ -63,8 +63,8 @@
                     <p class="address">
                         <a href="https://www.google.it/maps/place/Studio+M+Di+Fabbri+Maurizio/@44.3771006,11.7263129,15z/data=!4m5!3m4!1s0x0:0x346d6bb38e4702a6!8m2!3d44.3771006!4d11.7263129">
                             <img src="location-pin-white.svg" alt="">
-                            Via Lasie 10/L
-                            40026 Imola (Bo)
+                            Torre Lasie, via Lasie 10/L
+                            40026 Imola
                         </a>
                     </p>
                 </p>
