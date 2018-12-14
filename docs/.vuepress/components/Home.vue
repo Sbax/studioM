@@ -312,7 +312,7 @@ section.contacts {
     }
 
     > * {
-        width: 90vw;
+        width: 95vw;
         margin: 1.2rem auto 0 auto;
 
         @media screen and (min-width: 1024px) {
