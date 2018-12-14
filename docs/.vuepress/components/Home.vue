@@ -302,6 +302,8 @@ section.contacts {
     margin-top: 6rem;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 
     img {
         width: 75vw;
@@ -311,14 +313,31 @@ section.contacts {
             width: 50vw;
         }
     }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -2rem;
+        @media screen and (min-width: 600px) {
+            bottom: -3rem;
+        }
+        left: 0;
+        right: 0;
+        height: 6rem;
+        background: black;
+        transform: skewY(2deg);
+    }
 }
 
 .map {
+    margin-top: 6rem;
     flex-direction: column-reverse;
     display: flex;
     padding: 0;
     margin: 0;
     height: 66vh;
+    position: relative;
+    z-index: 1;
 
     &-container {
         height: 100%;
