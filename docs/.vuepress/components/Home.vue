@@ -44,18 +44,6 @@
             </div>
         </section>
         <section class="contacts">
-            <article class="social">
-                <a href="https://www.facebook.com/pg/Studio-M-Parrucchieri-1644568429132611/photos/?ref=page_internal">
-                    <div>
-                        <img src="facebook.svg" alt="">
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/studiomparrucchieri/">
-                    <div>
-                        <img src="instagram.svg" alt="">
-                    </div>
-                </a>
-            </article>
             <article class="contacts">
                 <h1 id="contacts">Contatti</h1>
             </article>
@@ -72,13 +60,26 @@
                             studiomparrucchieri@gmail.com
                         </a>
                     </p>
-                    <p>
+                    <p class="address">
                         <a href="https://www.google.it/maps/place/Studio+M+Di+Fabbri+Maurizio/@44.3771006,11.7263129,15z/data=!4m5!3m4!1s0x0:0x346d6bb38e4702a6!8m2!3d44.3771006!4d11.7263129">
+                            <img src="location-pin-white.svg" alt="">
                             Torre Lasie - via Lasie 10/L
                             40026 Imola (Bo)
                         </a>
                     </p>
                 </p>
+            </article>
+            <article class="social">
+                <a href="https://www.facebook.com/pg/Studio-M-Parrucchieri-1644568429132611/photos/?ref=page_internal">
+                    <div>
+                        <img src="facebook.svg" alt="">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/studiomparrucchieri/">
+                    <div>
+                        <img src="instagram.svg" alt="">
+                    </div>
+                </a>
             </article>
             <article class="times">
                 <h1>Orari</h1>
@@ -286,14 +287,15 @@ img {
 
 .social {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
 
     > * {
-        height: 4rem;
-        width: 4rem;
+        height: 3rem;
+        width: 3rem;
 
         + * {
-            margin-left: 2rem;
+            margin-left: 1.5rem;
         }
     }
 }
@@ -305,9 +307,13 @@ section.contacts {
     position: relative;
     z-index: 2;
 
+    h1 {
+        margin: auto;
+    }
+
     > * {
         width: 90vw;
-        margin: auto;
+        margin: 2rem auto 0 auto;
 
         @media screen and (min-width: 1024px) {
             width: auto;
@@ -365,10 +371,18 @@ section.contacts {
             }
         }
     }
+
+    .address {
+        img {
+            width: 1em;
+            height: 1em;
+            display: inline;
+            margin: auto;
+        }
+    }
 }
 
 .map {
-    margin-top: 6rem;
     flex-direction: column-reverse;
     display: flex;
     padding: 0;
