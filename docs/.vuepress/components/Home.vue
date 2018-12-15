@@ -285,21 +285,6 @@ img {
     }
 }
 
-.social {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-
-    > * {
-        height: 3rem;
-        width: 3rem;
-
-        + * {
-            margin-left: 1.5rem;
-        }
-    }
-}
-
 section.contacts {
     margin-top: 6rem;
     display: flex;
@@ -377,6 +362,21 @@ section.contacts {
             height: 1em;
             display: inline;
             margin: auto;
+        }
+    }
+
+    .social {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+
+        > *, img {
+            height: 3rem;
+            width: 3rem;
+
+            + * {
+                margin-left: 1.5rem;
+            }
         }
     }
 }
