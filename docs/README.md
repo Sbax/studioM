@@ -33,7 +33,7 @@ Ciò che è di moda, per il fatto di essere di moda, è già fuori moda. E tu lo
 
  STUDIO M Parrucchieri può realizzarlo e farlo diventare… ora sì, moda!
 
-Cambiare per assomigliare di più a se stess.
+Cambiare per assomigliare di più a se stessi.
 
 Inventare perché i tuoi capelli siano come sei tu.
 

@@ -333,27 +333,14 @@ section.contacts {
         a {
             display: inline-block;
             position: relative;
-            height: 2rem;
-            line-height: 1.8rem;
+            line-height: 1.4rem;
             margin-bottom: 0.2rem;
 
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0.2rem;
-                width: 100%;
-                height: 2px;
-                background: white;
-                transform: scaleX(1);
-                transition: transform 300ms ease;
-            }
+            border-bottom: 2px solid white;
+            transition: border 150ms ease-in-out;
 
-            &:hover,
-            &.active {
-                &:before {
-                    transform: scaleX(0.5);
-                }
+            &:hover {
+                border-bottom: 2px solid transparent;
             }
         }
     }
