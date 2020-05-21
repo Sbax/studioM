@@ -14,3 +14,8 @@ public_path: ''
 front_matter_path: ''
 use_front_matter_path: true
 file_template: ":filename:"
+build:
+  preview_output_directory: ".vuepress/dist"
+  preview_docker_image: forestryio/build:latest
+  mount_path: "/opt/buildhome/repo"
+  instant_preview_command: vuepress dev -p 8080 -h 0.0.0.0
