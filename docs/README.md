@@ -19,7 +19,7 @@ products:
   url: https://it.tigiprofessional.com/?country=IT
 - url: https://terradisole.it/
   logo: "/terradisole-logo-black.png"
-times: martedì a giovedì dalle 12 alle 19.00 venerdì dalle 11 alle 19 sabato dalle
+times: martedì a giovedì dalle 12 alle 19.00 venerdì dalle 12 alle 19 sabato dalle
   9 alle 17
 home_image: "/home.jpg"
 
